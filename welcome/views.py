@@ -2,7 +2,6 @@ import os
 from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse
-
 from . import database
 from .models import PageView
 
@@ -16,6 +15,12 @@ def index(request):
         'hostname': hostname,
         'database': database.info(),
         'count': PageView.objects.count()
+    })
+
+def home(request):
+
+    return render(request, 'welcome/test.html', {
+
     })
 
 def health(request):
