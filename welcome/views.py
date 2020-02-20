@@ -19,7 +19,7 @@ def index(request):
 
 def home(request):
 
-    return render(request, 'welcome/test.html', {
+    return render(request, 'base.html', {
 
     })
 
